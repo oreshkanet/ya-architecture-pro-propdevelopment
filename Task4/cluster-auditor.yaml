@@ -24,20 +24,3 @@ rules:
   - apiGroups: ["apiregistration.k8s.io"]
     resources: ["apiservices"]
     verbs: ["get", "list", "watch"]
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: cluster-auditor-binding
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: cluster-auditor
-subjects:
-  - kind: Group
-    name: security-team
-    apiGroup: rbac.authorization.k8s.io
-  # Можно добавить ops-managers, если требуется
-  # - kind: Group
-  #   name: ops-managers
-  #   apiGroup: rbac.authorization.k8s.io

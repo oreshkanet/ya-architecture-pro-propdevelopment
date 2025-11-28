@@ -1,13 +1,13 @@
 # Группы пользователей
 
-Пользователи по орг. структуре:
+## Пользователи по орг. структуре
+
 - Специалист ИБ
 - DevOps-инженер
 - Инженер по эксплуатации
 - Менеджер операционной команды
 
-
-Таблица ролей:
+## Таблица ролей
 
 | Роль  | Права роли | Группы пользователей |
 | --- | --- | --- |
@@ -17,3 +17,62 @@
 | ``ops-manager`` | Только ``get``, ``list``, ``watch`` в неймспейсах проекта | Менеджер операционной команды |
 | ``cluster-auditor`` | Права ``get``, ``list``, ``watch`` на ресурсы кластера ``ClusterRole``, ``ClusterRoleBinding``, ``Node``, ``Namespace``, ``StorageClass``, ``PriorityClass``, ``CustomResourceDefinition``, ``APIService``, ``CertificateSigningRequest`` | Специалист ИБ (дополнительная роль), Менеджер операционной команды (по запросу) |
 | ``cluster-admin`` | Полные права (*) на все ресурсы кластера | Подключается по запросу DevOps-инженерам, инженерам по эксплуатации |
+
+## security-auditor
+
+[security-auditor.yaml](./security-auditor.yaml)
+
+![security-auditor](./assets/security-auditor.png)
+
+[security-auditor-binding.yaml](./security-auditor-binding.yaml)
+
+![security-auditor-binding](./assets/security-auditor-binding.png)
+
+## devops-engineer
+
+[devops-engineer.yaml](./devops-engineer.yaml)
+
+![devops-engineer](./assets/devops-engineer.png)
+
+[devops-engineer-binding.yaml](./devops-engineer-binding.yaml)
+
+![devops-engineer-binding](./assets/devops-engineer-binding.png)
+
+## ops-engineer
+
+[ops-engineer.yaml](./ops-engineer.yaml)
+
+![ops-engineer](./assets/ops-engineer.png)
+
+[ops-engineer-binding.yaml](./ops-engineer-binding.yaml)
+
+![ops-engineer-binding](./assets/ops-engineer-binding.png)
+
+## ops-manager
+
+[ops-manager.yaml](./ops-manager.yaml)
+
+![ops-manager](./assets/ops-manager.png)
+
+[ops-manager-binding.yaml](./ops-manager-binding.yaml)
+
+![ops-manager-binding](./assets/ops-manager-binding.png)
+
+## cluster-auditor
+
+[cluster-auditor.yaml](./cluster-auditor.yaml)
+
+![cluster-auditor](./assets/cluster-auditor.png)
+
+[cluster-auditor-binding.yaml](./cluster-auditor-binding.yaml)
+
+![cluster-auditor-binding](./assets/cluster-auditor-binding.png)
+
+## cluster-admin
+
+[cluster-admin-binding.yaml](./cluster-admin-binding.yaml)
+
+![cluster-admin-binding](./assets/cluster-admin-binding.png)
+
+
+

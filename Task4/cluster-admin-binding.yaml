@@ -1,15 +1,15 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: cluster-admin-temp
+  name: cluster-admin-binding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: cluster-admin
 subjects:
-  - kind: Group
-    name: devops-team
+  - kind: User
+    name: user_devops2
     apiGroup: rbac.authorization.k8s.io
-  # При необходимости:
-  # - kind: User
-  #   name: john.doe@example.com
+  - kind: User
+    name: user_ops_engeneer1
+    apiGroup: rbac.authorization.k8s.io

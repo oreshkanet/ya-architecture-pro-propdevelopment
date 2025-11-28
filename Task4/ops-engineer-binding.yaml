@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: ops-engineer-binding
+roleRef:
+  kind: ClusterRole
+  name: ops-engineer
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+  - kind: Group
+    name: operations-team
+    apiGroup: rbac.authorization.k8s.io
+    namespace: kube-system
+  - kind: User
+    name: user_ops_engeneer1
+    apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: user_ops_engeneer2
+    apiGroup: rbac.authorization.k8s.io
