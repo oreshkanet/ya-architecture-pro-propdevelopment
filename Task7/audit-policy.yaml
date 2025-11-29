@@ -1,0 +1,9 @@
+apiVersion: audit.gatekeeper.sh/v1alpha1
+kind: Config
+metadata:
+  name: config
+  namespace: gatekeeper-system
+spec:
+  auditIntervalSeconds: 30
+  constraintViolationsLimit: 100
+  auditFromCache: true
